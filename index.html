@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Resume Screening Tool</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Resume Screening Tool</h1>
+    <p>Upload one or more <strong>PDF resumes</strong> and paste a job description to rank candidates.</p>
+
+    <form id="analyzeForm">
+      <label for="jobDesc">Job Description</label>
+      <textarea id="jobDesc" placeholder="Paste job description here..." required></textarea>
+
+      <label for="resumes">Resumes (PDF, multiple allowed)</label>
+      <input type="file" id="resumes" accept="application/pdf" multiple required/>
+
+      <button type="submit">Analyze</button>
+    </form>
+
+    <div id="status"></div>
+
+    <table id="resultsTable" class="hidden">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>File</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
